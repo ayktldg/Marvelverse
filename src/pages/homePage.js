@@ -1,9 +1,10 @@
+import { getHomePageView } from "../views/homePageView.js";
+import { mainPage } from "../constants.js";
+//import { getNavBarView } from "../views/NavBarView.js";
+import { getNavbar } from "./navbar.js";
+
 export const initHomePage = () => {
-  const mainPage = document.getElementById("app");
-  const home = document.createElement("div");
-  home.classList.add("home");
-  home.innerHTML = String.raw`
-    <h1>Hello Marvelverse</h1>
-    `;
+  const home = getHomePageView();
   mainPage.appendChild(home);
+  getNavbar();
 };
