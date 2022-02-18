@@ -4,8 +4,8 @@ Marvelverse is a Marvel comics and characters website, users can find marvel cha
 
 ### Api Source
 
-Url: [https://developer.marvel.com/](https://developer.marvel.com/)
-Api calls limit is 3000 per day. A developer can send a request to api with api key.
+- Url: [https://developer.marvel.com/](https://developer.marvel.com/)
+- Api calls limit is 3000 per day. A developer can send a request to api with api key.
 
 ## Color Palette
 - --clr-dark: #202020
