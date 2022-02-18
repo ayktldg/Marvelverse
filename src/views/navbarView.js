@@ -7,7 +7,6 @@ export const getNavBarView = () => {
         <ul class="header__list">
           <li class="header__item">Characters</li>
           <li class="header__item">Events</li>
-          <li class="header__item">Creators</li>
           <li class="header__item">Series</li>
         </ul>
       </nav>
