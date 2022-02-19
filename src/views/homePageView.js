@@ -5,7 +5,7 @@ export const getHomePageView = () => {
   <div class="hero container">
     <div class="hero__img__wrapper">
       <img
-          src="../../public/assets/spidey-hero.jpeg"
+          src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/spidey02_ons_cut_dsk_01.jpg"
           alt="spidey hero image"
           class="hero__img"
       />
