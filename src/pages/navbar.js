@@ -1,12 +1,13 @@
 import { getNavBarView } from "../views/navbarView.js";
-import { mainPage } from "../constants.js";
+import { appWrapper } from "../constants.js";
+import { initSelectedMarvelPage } from "./marvelsListPage.js";
+
 export const getNavbar = () => {
-  //const home = document.querySelector(".home");
   const navbar = getNavBarView();
-  mainPage.appendChild(navbar);
+  appWrapper.appendChild(navbar);
 
   const navList = document.querySelector(".header__list");
   navList.addEventListener("click", (event) => {
-    console.log(event.target.textContent.toLowerCase());
+    initSelectedMarvelPage(event.target.textContent.toLowerCase());
   });
 };

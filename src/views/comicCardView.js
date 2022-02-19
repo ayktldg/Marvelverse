@@ -1,7 +1,8 @@
-export const getMarvelCardView = (marvel) => {
-  const marvelCard = document.createElement("li");
-  marvelCard.classList.add("card");
-  marvelCard.innerHTML = String.raw`
+export const getComicCardView = (marvel) => {
+  const comicCard = document.createElement("li");
+  comicCard.classList.add("card");
+  comicCard.classList.add("comic__card");
+  comicCard.innerHTML = String.raw`
     <div class="card__header">
         <img
           src="${marvel.images[0].path}.${marvel.images[0].extension}"
@@ -13,5 +14,5 @@ export const getMarvelCardView = (marvel) => {
       <h5 class="card__title">${marvel.title}</h5>
     </div>
     `;
-  return marvelCard;
+  return comicCard;
 };
