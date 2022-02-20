@@ -22,6 +22,6 @@ Marvelverse is a Marvel comics and characters website, users can find marvel cha
 
 ## Nice To Have
 - [ ]  Users can search character or comic with keyword
-- [ ]  Transition between pages
+- [x]  Transition between pages
 - [ ]  Pagination if it is needed
 

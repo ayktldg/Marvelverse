@@ -2,7 +2,7 @@ export const getHomePageView = () => {
   const home = document.createElement("div");
   home.classList.add("home");
   home.innerHTML = String.raw`
-  <div class="hero container">
+  <div class="hero container animate__animated animate__lightSpeedInRight">
     <div class="hero__img__wrapper">
       <img
           src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/spidey02_ons_cut_dsk_01.jpg"

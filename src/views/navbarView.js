@@ -2,7 +2,7 @@ export const getNavBarView = () => {
   const navbar = document.createElement("header");
   navbar.innerHTML = String.raw`
     <div class="container">
-      <a href="#" class="header__logo">MARVELVERSE</a>
+      <span class="header__logo">MARVELVERSE</span>
       <nav>
         <ul class="header__list">
           <li class="header__item">Characters</li>

@@ -2,6 +2,8 @@ export const getComicCardView = (marvel) => {
   const comicCard = document.createElement("li");
   comicCard.classList.add("card");
   comicCard.classList.add("comic__card");
+  comicCard.classList.add("animate__animated");
+  comicCard.classList.add("animate__fadeInDown");
   comicCard.innerHTML = String.raw`
     <div class="card__header">
         <img

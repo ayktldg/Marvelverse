@@ -17,7 +17,7 @@ export const initSelectedMarvelPage = async (endpoint) => {
 };
 
 const fetchCharacters = async (dataContainerClass, endpoint) => {
-  const url = `https://gateway.marvel.com:443/v1/public/${endpoint}?limit=10&apikey=${API_KEY}`;
+  const url = `https://gateway.marvel.com:443/v1/public/${endpoint}?limit=20&apikey=${API_KEY}`;
   const response = await fetch(url);
   if (!response.ok) {
     throw new Error("Fetch Failed. Network Error!!!");

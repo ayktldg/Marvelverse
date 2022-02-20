@@ -5,8 +5,9 @@ import { getMarvelCards } from "./marvelCard.js";
 
 export const initHomePage = async () => {
   try {
-    const home = getHomePageView();
     const main = document.getElementById("main");
+    main.innerHTML = "";
+    const home = getHomePageView();
     main.appendChild(home);
     const dataContainerClass = ".home__container";
     await fetchComics(dataContainerClass);
@@ -16,7 +17,7 @@ export const initHomePage = async () => {
 };
 
 const fetchComics = async (dataContainerClass) => {
-  const url = `https://gateway.marvel.com:443/v1/public/comics?orderBy=-modified&limit=10&apikey=${API_KEY}`;
+  const url = `https://gateway.marvel.com:443/v1/public/comics?orderBy=-modified&limit=20&apikey=${API_KEY}`;
   const response = await fetch(url);
   if (!response.ok) {
     throw new Error("Fetch Failed. NEtwork Error!!!");
