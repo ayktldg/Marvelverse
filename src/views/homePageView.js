@@ -1,4 +1,4 @@
-export const getHomePageView = () => {
+export const getHomePageView = (endpoint) => {
   const home = document.createElement("div");
   home.classList.add("home");
   home.innerHTML = String.raw`
@@ -15,8 +15,8 @@ export const getHomePageView = () => {
       <p>Comics, characters and events are coming with this world</p>
     </div>
   </div>
-  <div class="container home__container">
-    <h2 class="home__title">COMICS</h2>
+  <div class="container marvels__container">
+    <h2 class="marvels__title">${endpoint.toUpperCase()}</h2>
   </div>
       `;
   return home;

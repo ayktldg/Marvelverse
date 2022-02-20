@@ -1,7 +1,7 @@
 import { getFooterView } from "../views/footerView.js";
-import { appWrapper } from "../constants.js";
+import { APP_UI } from "../constants.js";
 
 export const getFooter = () => {
   const footer = getFooterView();
-  appWrapper.appendChild(footer);
+  APP_UI.appendChild(footer);
 };

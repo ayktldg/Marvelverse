@@ -1,12 +1,13 @@
-import { initHomePage } from "./pages/homePage.js";
+import { initSelectedMarvelPage } from "./pages/marvelsListPage.js";
 import { getNavbar } from "./pages/navbar.js";
 import { getFooter } from "./pages/footer.js";
 import { generateMainPage } from "./pages/mainPage.js";
+import { INITIAL_ENDPOINT } from "./constants.js";
 
-export const loadApp = () => {
+const loadApp = () => {
   getNavbar();
   generateMainPage();
-  initHomePage();
+  initSelectedMarvelPage(INITIAL_ENDPOINT);
   getFooter();
 };
 

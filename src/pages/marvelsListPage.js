@@ -1,28 +1,21 @@
 import { getMarvelsListView } from "../views/marvelsListView.js";
-//import { mainPage } from "../constants.js";
-import { API_KEY } from "../constants.js";
-import { getMarvelCards } from "./marvelCard.js";
+import { getHomePageView } from "../views/homePageView.js";
+import { clearMainPage } from "./pageCleaner.js";
+import { fetchData } from "./fetchData.js";
 
 export const initSelectedMarvelPage = async (endpoint) => {
   try {
-    const main = document.getElementById("main");
-    main.innerHTML = "";
-    const characters = getMarvelsListView(endpoint);
-    main.appendChild(characters);
-    const dataContainerClass = ".marvels__container";
-    await fetchCharacters(dataContainerClass, endpoint);
+    const main = clearMainPage();
+    let pageView;
+    if (endpoint === "comics") {
+      pageView = getHomePageView(endpoint);
+    } else {
+      pageView = getMarvelsListView(endpoint);
+    }
+    main.appendChild(pageView);
+    const dataContainer = ".marvels__container";
+    await fetchData.fetchCards(dataContainer, endpoint);
   } catch (err) {
     console.log(err);
   }
-};
-
-const fetchCharacters = async (dataContainerClass, endpoint) => {
-  const url = `https://gateway.marvel.com:443/v1/public/${endpoint}?limit=20&apikey=${API_KEY}`;
-  const response = await fetch(url);
-  if (!response.ok) {
-    throw new Error("Fetch Failed. Network Error!!!");
-  }
-  const marvelsData = await response.json();
-
-  getMarvelCards(marvelsData.data.results, dataContainerClass, endpoint);
 };

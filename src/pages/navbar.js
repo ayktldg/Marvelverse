@@ -1,11 +1,11 @@
 import { getNavBarView } from "../views/navbarView.js";
-import { appWrapper } from "../constants.js";
+import { APP_UI } from "../constants.js";
 import { initSelectedMarvelPage } from "./marvelsListPage.js";
-import { initHomePage } from "./homePage.js";
+import { INITIAL_ENDPOINT } from "../constants.js";
 
 export const getNavbar = () => {
   const navbar = getNavBarView();
-  appWrapper.appendChild(navbar);
+  APP_UI.appendChild(navbar);
 
   const navList = document.querySelector(".header__list");
   const navLogo = document.querySelector(".header__logo");
@@ -15,6 +15,6 @@ export const getNavbar = () => {
   });
 
   navLogo.addEventListener("click", () => {
-    initHomePage();
+    initSelectedMarvelPage(INITIAL_ENDPOINT);
   });
 };
