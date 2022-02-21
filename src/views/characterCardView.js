@@ -1,5 +1,6 @@
 export const getCharacterCardView = (marvel) => {
   const characterCard = document.createElement("li");
+  characterCard.id = marvel.id;
   characterCard.classList.add("card");
   characterCard.classList.add("character__card");
   characterCard.classList.add("animate__animated");
