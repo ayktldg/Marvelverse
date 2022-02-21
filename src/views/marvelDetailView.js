@@ -1,4 +1,4 @@
-export const getComicDetailPageView = (marvelData) => {
+export const getMarvelDetailView = (marvelData) => {
   const marvel = organizeMarvelData(marvelData);
   console.log(marvelData);
   const detailsView = document.createElement("div");
@@ -25,8 +25,6 @@ export const getComicDetailPageView = (marvelData) => {
             <p>${marvel.creators}</p>
             <h4>Characters:</h4>
             <p>${marvel.characters}</p>
-            <h4>Page Count:</h4>
-            <span>${marvel.pageCount}</span>
         </div>
         <div class="detail__description">
             <h4>Description:</h4>
@@ -54,13 +52,12 @@ const organizeMarvelData = (marvel) => {
       ? marvel.characters.items.map((character) => character.name).join(", ")
       : "No character information";
   const image = `${marvel.thumbnail.path}.${marvel.thumbnail.extension}`;
-  const { title, pageCount } = marvel;
+  const { title } = marvel;
   return {
     title,
     image,
     characters,
     description,
     creators,
-    pageCount,
   };
 };

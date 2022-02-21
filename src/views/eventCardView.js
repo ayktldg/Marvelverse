@@ -1,5 +1,6 @@
 export const getEventCardView = (marvel) => {
   const eventCard = document.createElement("li");
+  eventCard.id = marvel.id;
   eventCard.classList.add("card");
   eventCard.classList.add("event__card");
   eventCard.classList.add("animate__animated");

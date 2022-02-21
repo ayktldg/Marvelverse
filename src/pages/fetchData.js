@@ -21,6 +21,6 @@ export const fetchData = {
       throw new Error("Fetch Failed. Network Error!!!");
     }
     const marvelDetails = await response.json();
-    initDetailPage(marvelDetails.data.results[0]);
+    initDetailPage(marvelDetails.data.results[0], endpoint);
   },
 };

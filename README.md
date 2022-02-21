@@ -18,7 +18,7 @@ Marvelverse is a Marvel comics and characters website, users can find marvel cha
 
 - [x]  Homepage lists most up to date comics and characters as cards
 - [x]  Users can go to characters and events pages via navigation bar
-- [ ]  Users can see details that their chosen item
+- [x]  Users can see details that their chosen item
 
 ## Nice To Have
 - [ ]  Users can search character or comic with keyword
