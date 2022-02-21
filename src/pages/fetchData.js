@@ -5,7 +5,7 @@ import { initDetailPage } from "./detailPage.js";
 
 export const fetchData = {
   fetchCards: async function (dataContainer, endpoint) {
-    const url = `${BASE_URL}${endpoint}?limit=20&apikey=${API_KEY}`;
+    const url = `${BASE_URL}${endpoint}?orderBy=-modified&limit=100&apikey=${API_KEY}`;
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error("Fetch Failed. Network Error!!!");

@@ -23,8 +23,6 @@ export const getCharacterDetailView = (marvelData) => {
                   <h1 class="detail__title">${marvel.name}</h1>
                   <h4>Comics</h4>
                   <p>${marvel.comics}</p>
-                  <h4>Series</h4>
-                  <p>${marvel.series}</p>
               </div>
               <div class="detail__description">
                   <h4>Description:</h4>
@@ -42,10 +40,6 @@ const organizeCharacterData = (marvel) => {
     marvel.comics.items.length > 0
       ? marvel.comics.items.map((comic) => comic.name).join(", ")
       : "No comic information";
-  const series =
-    marvel.series.items.length > 0
-      ? marvel.series.items.map((item) => item.name).join(", ")
-      : "No series information";
   const image = `${marvel.thumbnail.path}.${marvel.thumbnail.extension}`;
   const description =
     marvel.description === "" ? "No available description" : marvel.description;
@@ -55,6 +49,5 @@ const organizeCharacterData = (marvel) => {
     image,
     comics,
     description,
-    series,
   };
 };
