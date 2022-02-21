@@ -1,11 +1,11 @@
 export const getEventCardView = (marvel) => {
   const eventCard = document.createElement("li");
-  eventCard.id = marvel.id;
   eventCard.classList.add("card");
   eventCard.classList.add("event__card");
   eventCard.classList.add("animate__animated");
   eventCard.classList.add("animate__fadeInLeftBig");
   eventCard.innerHTML = String.raw`
+  <a id="${marvel.id}">
     <div class="card__header">
           <img
             src="${marvel.thumbnail.path}.${marvel.thumbnail.extension}"
@@ -16,6 +16,7 @@ export const getEventCardView = (marvel) => {
         <div class="card__body">
           <h5 class="card__title">${marvel.title}</h5>
         </div>
+  </a>
         `;
   return eventCard;
 };

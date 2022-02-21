@@ -35,10 +35,10 @@ export const getMarvelCards = (marvelsData, container, endpoint) => {
 };
 
 const cardHandler = (endpoint, card) => {
-  card.addEventListener("click", async (event) => {
+  const link = card.childNodes[1];
+  link.addEventListener("click", async () => {
     try {
-      console.log(event.target.id);
-      await fetchData.fetchDetails(endpoint, event.target.id);
+      await fetchData.fetchDetails(endpoint, link.id);
     } catch (err) {
       console.log(err);
     }

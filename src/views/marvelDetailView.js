@@ -1,6 +1,5 @@
 export const getMarvelDetailView = (marvelData) => {
   const marvel = organizeMarvelData(marvelData);
-  console.log(marvelData);
   const detailsView = document.createElement("div");
   detailsView.classList.add("details");
   detailsView.innerHTML = String.raw`
