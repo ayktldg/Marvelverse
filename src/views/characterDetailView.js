@@ -10,7 +10,7 @@ export const getCharacterDetailView = (marvelData) => {
                 class="detail__img--bg"
               />
               <div class="detail__img__cover">
-        <div class="container animate__animated animate__lightSpeedInRight">
+        <div class="container animate__animated animate__fadeIn">
           <div class="detail__img__wrapper">
             <img
                 src="${marvel.image}"

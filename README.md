@@ -2,6 +2,16 @@
 
 Marvelverse is a Marvel comics and characters website, users can find marvel characters and comics and look at their details.
 
+### Project Demo
+
+https://ayktldg.github.io/Marvelverse/
+
+### Technologies
+- HTML
+- CSS
+- JavaScript
+- Animate.css (for transitions)
+
 ### Api Source
 
 - Url: [https://developer.marvel.com/](https://developer.marvel.com/)
