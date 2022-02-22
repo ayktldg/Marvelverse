@@ -103,11 +103,15 @@ header {
   color: var(--clr-white);
 }
 
-.header__select-box {
-  border: 1px solid var(--clr-grey);
-}
+.header__select-box,
 .header__search__btn {
   border: 1px solid var(--clr-grey);
+  cursor: pointer;
+}
+
+.header__select-box:hover,
+.header__search__btn:hover {
+  color: var(--clr-red);
 }
 
 #main {
@@ -182,16 +186,19 @@ header {
   height: 100%;
   z-index: -2;
 }
+
 .detail__img__cover {
   background-color: var(--clr-black);
   opacity: 0.8;
 }
+
 .details .container {
   display: grid;
   gap: var(--space-md);
   padding-top: var(--space-xl);
   padding-bottom: var(--space-xl);
 }
+
 .detail__img {
   width: 21rem;
   height: 33rem;
@@ -245,9 +252,6 @@ footer {
   .header__list {
     margin-top: 0.5rem;
     font-size: 0.9rem;
-  }
-
-  .header__item {
   }
 
   .header__nav {

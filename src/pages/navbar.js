@@ -2,7 +2,7 @@ import { getNavBarView } from "../views/navbarView.js";
 import { APP_UI } from "../constants.js";
 import { initSelectedMarvelPage } from "./marvelsListPage.js";
 import { INITIAL_ENDPOINT } from "../constants.js";
-import { fetchData } from "./fetchData.js";
+import { fetchSearchedMarvels } from "../handlers/fetchData.js";
 
 export const getNavbar = () => {
   const navbar = getNavBarView();
@@ -15,19 +15,17 @@ export const getNavbar = () => {
   const selectBox = document.querySelector(".header__select-box");
 
   navList.addEventListener("click", (event) => {
-    initSelectedMarvelPage(event.target.textContent.toLowerCase());
+    const endpoint = event.target.textContent.toLowerCase();
+    initSelectedMarvelPage(endpoint);
   });
 
   navLogo.addEventListener("click", () => {
     initSelectedMarvelPage(INITIAL_ENDPOINT);
   });
 
-  searchBtn.addEventListener("click", async (event) => {
-    try {
-      event.preventDefault();
-      await fetchData.fetchSearchedMarvels(selectBox.value, searchInput.value);
-    } catch (error) {
-      console.log(error);
-    }
+  searchBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    initSelectedMarvelPage(`${selectBox.value},${searchInput.value}`, true);
+    searchInput.value = "";
   });
 };

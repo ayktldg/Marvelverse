@@ -1,4 +1,4 @@
-import { clearMainPage } from "./pageCleaner.js";
+import { clearMainPage } from "../handlers/pageCleaner.js";
 import { getMarvelDetailView } from "../views/marvelDetailView.js";
 import { getCharacterDetailView } from "../views/characterDetailView.js";
 
