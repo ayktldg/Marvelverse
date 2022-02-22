@@ -31,7 +31,7 @@ https://ayktldg.github.io/Marvelverse/
 - [x]  Users can see details that their chosen item
 
 ## Nice To Have
-- [ ]  Users can search character or comic with keyword
+- [x]  Users can search character or comic with keyword
 - [x]  Transition between pages
 - [ ]  Pagination if it is needed
 

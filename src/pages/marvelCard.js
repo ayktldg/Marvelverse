@@ -8,6 +8,12 @@ export const getMarvelCards = (marvelsData, container, endpoint) => {
   const marvelList = document.createElement("ul");
   marvelList.classList.add("marvels__list");
   dataContainer.appendChild(marvelList);
+  if (marvelsData.length === 0) {
+    const noDataMessage = document.createElement("h2");
+    noDataMessage.textContent = `OPPSS WE COULDN'T FIND YOUR SEARCHED MARVEL AT ${endpoint.toUpperCase()} !!`;
+    noDataMessage.classList.add("no-data-message");
+    dataContainer.appendChild(noDataMessage);
+  }
   marvelsData.forEach((marvel) => {
     let marvelCard;
     if (endpoint === "comics") {

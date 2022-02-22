@@ -66,12 +66,15 @@ header {
   cursor: pointer;
 }
 
-.header__list {
-  max-width: 768px;
+.header__nav {
+  width: 275px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.header__list {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: var(--space-md);
   font-size: 0.8rem;
 }
@@ -84,6 +87,33 @@ header {
   border-bottom: 3px solid var(--clr-red);
 }
 
+.header__search {
+  display: flex;
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.header__input,
+.header__select-box,
+.header__search__btn {
+  border: 1px solid var(--clr-grey);
+  padding: 0.3rem;
+  height: 2rem;
+  background-color: var(--clr-dark);
+  color: var(--clr-white);
+}
+
+.header__select-box {
+  border: 1px solid var(--clr-grey);
+}
+.header__search__btn {
+  border: 1px solid var(--clr-grey);
+}
+
+#main {
+  width: 100vw;
+  min-height: calc(100vh - 227.8px);
+}
 /*---Home/Hero style---*/
 .hero__statement {
   text-align: center;
@@ -127,7 +157,7 @@ header {
   height: 20rem;
 }
 
-.card:hover {
+.card:hover .card__title {
   color: var(--clr-red);
 }
 
@@ -213,12 +243,17 @@ footer {
   }
 
   .header__list {
-    margin-top: 0;
+    margin-top: 0.5rem;
     font-size: 0.9rem;
   }
 
   .header__item {
-    margin-left: var(--space-md);
+  }
+
+  .header__nav {
+    width: 275px;
+    margin-left: auto;
+    margin-right: 0;
   }
 
   .hero__title {

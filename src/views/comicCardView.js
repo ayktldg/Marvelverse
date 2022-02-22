@@ -6,7 +6,7 @@ export const getComicCardView = (marvel) => {
   comicCard.classList.add("animate__fadeInDown");
 
   comicCard.innerHTML = String.raw`
-  <a id="${marvel.id}">
+  <a id="${marvel.id}" class=""card__link>
     <div class="card__header">
         <img
           src="${marvel.images[0].path}.${marvel.images[0].extension}"

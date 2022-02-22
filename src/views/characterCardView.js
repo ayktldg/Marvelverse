@@ -5,7 +5,7 @@ export const getCharacterCardView = (marvel) => {
   characterCard.classList.add("animate__animated");
   characterCard.classList.add("animate__fadeInLeftBig");
   characterCard.innerHTML = String.raw`
-  <a id="${marvel.id}">
+  <a id="${marvel.id}" class=""card__link>
   <div class="card__header">
         <img
           src="${marvel.thumbnail.path}.${marvel.thumbnail.extension}"
