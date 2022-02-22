@@ -1,6 +1,8 @@
 # Marvelverse
 
-Marvelverse is a Marvel comics and characters website, users can find marvel characters and comics and look at their details.
+Marvelverse is a Marvel comics website, users can find marvel characters, comics, and events by choosing one of the links or typing keywords in the search bar at the navigation bar. Also, they can look at their details by clicking the cards.
+
+![Project gif](./public/assets/spidey.gif)
 
 ### Project Demo
 
