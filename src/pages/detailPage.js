@@ -7,10 +7,8 @@ export const initDetailPage = (marvelDetails, endpoint) => {
   let pageView;
   if (endpoint === "comics" || endpoint === "events") {
     pageView = getMarvelDetailView(marvelDetails);
-    main.appendChild(pageView);
-  }
-  if (endpoint === "characters") {
+  } else if (endpoint === "characters") {
     pageView = getCharacterDetailView(marvelDetails);
-    main.appendChild(pageView);
   }
+  main.appendChild(pageView);
 };

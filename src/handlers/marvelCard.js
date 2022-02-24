@@ -31,7 +31,7 @@ export const getMarvelCards = (marvelsData, container, endpoint) => {
         marvelCard = getEventCardView(marvel);
       }
     } else {
-      throw new Error("Error");
+      throw new Error("Error: Undefined endpoint ");
     }
 
     if (marvelCard) {
